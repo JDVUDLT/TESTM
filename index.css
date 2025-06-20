@@ -1,0 +1,31 @@
+/* ПК */
+.container {
+  width: clamp(1072px, 90%, 1312px);
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(60px, 80px));
+  gap: 32px;
+  padding-inline: 16px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+}
+
+/* Планшет */
+@media (max-width: 1199px) and (min-width: 736px) {
+  .container {
+    width: clamp(672px, 90%, 928px);
+    grid-template-columns: repeat(8, minmax(56px, 88px));
+    gap: 32px;
+    padding-inline: 16px;
+  }
+}
+
+/* Телефон */
+@media (max-width: 735px) and (min-width: 320px) {
+  .container {
+    width: clamp(296px, 90%, 424px);
+    grid-template-columns: repeat(4, minmax(56px, 88px));
+    gap: 24px;
+    padding-inline: 12px;
+  }
+}
